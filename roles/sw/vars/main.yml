@@ -1,0 +1,23 @@
+---
+switches:
+  - hostname: leaf01m
+    profile: leaf
+    city: mia
+    mgmt_ip: 10.40.95.240
+    vlans:
+      - number: 901
+        name: test1
+        
+      - number: 902
+        name: test2
+    interfaces:
+      - port: giga 0/15
+        lldp: send-and-receive
+        mode: trunk
+        desc: test1
+        state: no shutdown
+      - port: giga 0/16
+        lldp: send
+        mode: acces
+        desc: test2
+        state: shutdown

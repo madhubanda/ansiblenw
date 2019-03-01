@@ -1,0 +1,6 @@
+---
+- name: Apply config on sw
+  hosts: localhost
+
+  roles:
+   - sw
