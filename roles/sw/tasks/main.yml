@@ -1,5 +1,5 @@
 ---
 - name: Generate configutration file
-  template: src={{ item.profile }}.j2 dest=/tmp/{{ item.hostname }}.cfg
+  template: src={{ item.profile }}.j2 dest=/etc/ansible/{{ item.hostname }}.cfg
   with_items:
    "{{ switches }}"
