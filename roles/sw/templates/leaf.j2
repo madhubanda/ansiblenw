@@ -1,10 +1,12 @@
+password
+enable
+password
 configure terminal
-#
-{% for link in item.interfaces}
+{% for link in item.interfaces%}
 interface {{ link.port }}
 {{ link.state }}
 lldp {{ link.lldp }}
 switchport mode {{ link.mode }}
 description {{ link.desc }}
-#
+exit
 {% endfor %}
